@@ -1,0 +1,83 @@
+.btn {
+  font-family: Jost, sans-serif;
+  width: calc((353 / var(--max-height)) * 100vh);
+  height: calc((56 / var(--max-height)) * 100vh);
+  max-width: 353px;
+  max-height: 56px;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  border-radius: calc((12 / var(--max-height)) * 100vh);
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  user-select: none;
+
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: calc((16 / 852) * 100vh);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn--fill {
+  border: 1px solid #775ce5;
+  background-color: #775ce5;
+  color: #fff;
+}
+
+.btn--fill:hover {
+  border: 1px solid #775ce5;
+  background-color: #775ce5d8;
+  color: #fff;
+}
+
+.btn--light {
+  border: 1px solid #775ce5;
+  background-color: #fff;
+  color: #775ce5;
+}
+
+.btn--light:hover {
+  border: 1px solid #775ce5;
+  background-color: #775ce515;
+  color: #503ba3;
+}
+
+.btn--payment {
+  height: calc((72 / var(--max-height)) * 100vh);
+  background-color: #fff;
+  margin-bottom: calc((10 / var(--max-height)) * 100vh);
+}
+
+.btn--out {
+  height: calc((46 / var(--max-height)) * 100vh);
+  max-height: 46px;
+  border: 1px solid #f23152;
+  background-color: #fff;
+  color: #f23152;
+}
+
+.btn--out:hover {
+  border: 1px solid #f23152;
+  background-color: #775ce515;
+  color: #f23152;
+}
+
+.btn--lightSet {
+  height: calc((46 / var(--max-height)) * 100vh);
+  max-height: 46px;
+  border: 1px solid #775ce5;
+  background-color: #fff;
+  color: #775ce5;
+}
+
+.btn--lightSet:hover {
+  border: 1px solid #775ce5;
+  background-color: #775ce515;
+  color: #503ba3;
+}

@@ -1,0 +1,75 @@
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: calc((24 / var(--max-height)) * 100vh);
+  overflow: hidden;
+}
+
+.hello {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: calc((107 / var(--max-height)) * 100vh) auto;
+  height: calc((87 / var(--max-height)) * 100vh);
+  /* max-width: 186px; */
+  color: #fff;
+  /* border: 1px solid red; */
+
+  h1 {
+    font-size: calc((42 / var(--max-height)) * 100vh);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    font-size: calc((20 / var(--max-height)) * 100vh);
+    text-align: center;
+    margin: 0;
+    color: #fff;
+  }
+}
+
+.backgroundImg {
+  height: calc((583 / var(--max-height)) * 100vh);
+  max-height: 583px;
+  display: flex;
+  position: relative;
+  border-radius: calc((24 / var(--max-height)) * 100vh);
+  background-image: url('/public/images/bgdwelcome.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.coins {
+  position: absolute;
+  top: 30%; /* позиционирование монет */
+  left: 62%;
+  transform: translate(
+    -50%,
+    -20%
+  ); /* Центрирует по горизонтали и смещает по вертикали */
+  width: calc((900 / var(--max-height)) * 100vh);
+  max-width: 900px;
+  /* width: calc((852 / 852) * 100vh); */
+  height: calc((900 / var(--max-height)) * 100vh);
+  max-height: 900px;
+  /* height: calc((852 / 852) * 100vh); */
+  z-index: 1;
+}
+
+.btnBlock {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: calc((12 / var(--max-height)) * 100vh);
+  margin-bottom: calc((45 / var(--max-height)) * 100vh);
+  z-index: 99;
+}
+
+.navLink {
+  text-decoration: none;
+}

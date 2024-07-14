@@ -1,0 +1,180 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: calc((24 / var(--max-height)) * 100vh);
+  overflow: hidden;
+  padding: calc((20 / var(--max-height)) * 100vh);
+  background-color: #f5f5f7;
+}
+
+.arrowback {
+  width: calc((24 / var(--max-height)) * 100vh);
+  /* width: calc((24 / 852) * 100vh); */
+  height: calc((24 / var(--max-height)) * 100vh);
+  margin-top: calc((33 / var(--max-height)) * 100vh);
+  margin-bottom: calc((22 / var(--max-height)) * 100vh);
+  background-image: url('/public/arrow-back.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.content {
+  /* height: calc((386 / var(--max-height)) * 100vh); */
+  max-height: 386px;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__header {
+  /* border: 1px solid red; */
+  padding: 0;
+  margin-bottom: calc((20 / var(--max-height)) * 100vh);
+
+  h2 {
+    /* line-height: 1; */
+    color: #121212;
+    font-size: calc((24 / var(--max-height)) * 100vh);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    /* line-height: 1; */
+    font-size: calc((14 / var(--max-height)) * 100vh);
+    text-align: center;
+    margin: 0;
+    color: #939199;
+  }
+}
+
+.content__form {
+  width: calc((353 / var(--max-height)) * 100vh);
+  max-width: 353px;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+
+  label {
+    font-size: calc((14 / var(--max-height)) * 100vh);
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+  }
+
+  input {
+    font-size: calc((14 / var(--max-height)) * 100vh);
+    border: none;
+    margin-bottom: calc((20 / var(--max-height)) * 100vh);
+    width: calc((353 / var(--max-height)) * 100vh);
+    height: calc((54 / var(--max-height)) * 100vh);
+    max-width: 353px !important;
+    max-height: 54px;
+    box-sizing: border-box;
+    border-radius: calc((12 / var(--max-height)) * 100vh);
+    outline: none;
+    border: 1px solid lightgray;
+  }
+
+  span {
+    font-size: calc((16 / var(--max-height)) * 100vh);
+    font-weight: 500;
+    color: #000;
+    margin-bottom: calc((12 / var(--max-height)) * 100vh);
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.navLink {
+  color: #775ce5;
+  margin-left: 5px;
+}
+
+.divider {
+  height: 1px;
+  background-color: lightgray;
+  margin-bottom: calc((20 / var(--max-height)) * 100vh);
+}
+
+.paymentBlock {
+  width: calc((353 / var(--max-height)) * 100vh);
+  height: calc((72 / var(--max-height)) * 100vh);
+  max-width: 353px;
+  max-height: 56px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  margin-bottom: calc((10 / var(--max-height)) * 100vh);
+  padding: 0;
+
+  border-radius: calc((12 / var(--max-height)) * 100vh);
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: calc((16 / 852) * 100vh);
+}
+
+.paymentBlock__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    font-size: calc((16 / var(--max-height)) * 100vh);
+    font-weight: 500;
+    color: #000;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  img {
+    width: calc((40 / var(--max-height)) * 100vh);
+    height: calc((40 / var(--max-height)) * 100vh);
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: calc((16 / var(--max-height)) * 100vh);
+    margin-right: calc((12 / var(--max-height)) * 100vh);
+  }
+}
+
+.payBlock__systems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    width: calc((160 / var(--max-height)) * 100vh);
+    height: calc((20 / var(--max-height)) * 100vh);
+    max-width: 160px;
+    max-height: 20px;
+    margin-right: calc((16 / var(--max-height)) * 100vh);
+  }
+}
+
+.invalidInput {
+  border: 1px solid red !important;
+}
+
+button {
+  transition: opacity 0.5s;
+}
+
+button:disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,203 @@
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: calc((24 / var(--max-height)) * 100vh);
+  /* border-radius: 24px; */
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main.rendering {
+  opacity: 0.4; /* Стиль для начала рендеринга */
+}
+
+.main.rendered {
+  opacity: 1; /* Стиль после завершения рендеринга */
+}
+
+.headerMenu {
+  color: #f3f5ff;
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: calc((61 / var(--max-height)) * 100vh);
+  margin-left: calc((20 / var(--max-height)) * 100vh);
+  margin-right: calc((20 / var(--max-height)) * 100vh);
+
+  span {
+    font-size: calc((16 / var(--max-height)) * 100vh);
+    margin: 0;
+    display: block;
+  }
+}
+
+.settings {
+  width: calc((24 / var(--max-height)) * 100vh);
+  /* width: calc((24 / 852) * 100vh); */
+  height: calc((24 / 852) * 100vh);
+  /* margin-top: 33px; */
+  /* margin-bottom: 22px; */
+  background-image: url('/public/images/settings.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.notifications {
+  width: calc((24 / var(--max-height)) * 100vh);
+  /* width: calc((24 / 852) * 100vh); */
+  height: calc((24 / 852) * 100vh);
+  /* margin-top: 33px; */
+  /* margin-bottom: 22px; */
+  background-image: url('/public/images/notifications.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* margin-top: calc((132 / var(--max-height)) * 100vh) auto; */
+  height: calc((87 / var(--max-height)) * 100vh);
+  /* max-width: 186px; */
+  color: #fff;
+  /* border: 1px solid red; */
+
+  /* p {
+    font-size: calc((20 / var(--max-height)) * 100vh);
+    text-align: center;
+    margin: 0;
+  } */
+
+  h1 {
+    /* display: inline-block; */
+    /* color: aqua; */
+    font-size: calc((34 / var(--max-height)) * 100vh);
+    font-weight: 600;
+    text-align: center;
+
+    /* margin: 0; */
+    margin-top: calc((14 / var(--max-height)) * 100vh);
+  }
+}
+
+.backgroundImg {
+  display: flex;
+  flex-direction: column;
+  height: calc((201 / var(--max-height)) * 100vh);
+  max-height: 201px;
+  display: flex;
+  position: relative;
+  /* border-radius: 24px; */
+  background-image: url('/public/images/balance.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  margin-bottom: calc((80 / var(--max-height)) * 100vh);
+}
+
+.operationsBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: calc((16 / var(--max-height)) * 100vh);
+  /* border: 1px solid red; */
+  position: absolute;
+  /* top: calc((170 / var(--max-height)) * 100vh); */
+  top: 85%;
+  /* позиционирование  */
+  left: 30%;
+  /* transform: translate(-50%, -20%); */
+  /* Центрирует по горизонтали и смещает по вертикали */
+  /* width: calc((900 / var(--max-height)) * 100vh); */
+  /* max-width: 900px; */
+  width: calc((145 / var(--max-height)) * 100vh);
+  height: calc((78 / var(--max-height)) * 100vh);
+  /* max-height: 900px; */
+  /* height: calc((852 / 852) * 100vh); */
+}
+
+.actionBlock {
+  text-align: center;
+  cursor: pointer;
+  transition: font-weight 0.5s;
+
+  .btnActionBlock {
+    display: grid;
+    width: calc((52 / var(--max-height)) * 100vh);
+    height: calc((52 / var(--max-height)) * 100vh);
+    max-width: 52px;
+    max-height: 52px;
+    background-color: #5b94e9;
+    border-radius: 50%;
+    border: var(--needed) solid #fff;
+    transition: background-color 0.5s;
+
+    .btnAction {
+      display: block;
+      width: calc((28 / var(--max-height)) * 100vh);
+      height: calc((28 / var(--max-height)) * 100vh);
+      max-width: 28px;
+      max-height: 28px;
+      margin: auto;
+      border-radius: 50%;
+      /* border: 1px solid red; */
+    }
+  }
+
+  .btnActionBlock:hover {
+    background-color: #0f66e7;
+  }
+}
+
+.actionBlock:hover {
+  font-weight: 700;
+}
+
+.transactionsContainer {
+  max-height: 520px;
+  overflow-y: auto; /* Добавляет вертикальную прокрутку */
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Стилизация полосы прокрутки */
+.transactionsContainer::-webkit-scrollbar {
+  width: calc((8 / var(--max-height)) * 100vh); /* Ширина полосы прокрутки */
+}
+
+.transactionsContainer::-webkit-scrollbar-thumb {
+  background-color: #f1f1f1; /* Цвет ползунка */
+  border-radius: calc(
+    (10 / var(--max-height)) * 100vh
+  ); /* Радиус скругления ползунка */
+  border: 1px solid #bababa;
+}
+
+.transactionsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Цвет ползунка при наведении */
+}
+
+.transactionsContainer::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет трека */
+  border-radius: calc(
+    (10 / var(--max-height)) * 100vh
+  ); /* Радиус скругления трека */
+}
+
+.integerPart {
+  font-weight: 500;
+}
+
+.decimalPart {
+  font-weight: 300;
+}
+
+.customLink {
+  text-decoration: none;
+  color: inherit;
+}
